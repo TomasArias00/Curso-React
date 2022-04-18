@@ -1,0 +1,29 @@
+.nav__bar__container{
+    background-color: rebeccapurple;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3.5rem;
+}
+
+.nav__bar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+
+.nav__bar__list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    color: White;
+    list-style: none;
+}
+
+.nav__bar__item a{
+    padding: 0 4rem;
+    color: white;
+    text-decoration: none;
+}
