@@ -8,8 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .item__list__title{
     color: var(--color-principal);
+    width: 100%;
 }
