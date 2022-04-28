@@ -31,7 +31,6 @@ function ItemCount(props){
     return(
         <div className='item__count__container'>
         <div className='item__count'>
-            <p className='item__count__title'>{props.title}</p>
             <div className='item__count__quantity'>
                 <button className='item__count__subtract' onClick={handleSubtract}>-</button>
                 <div className='item__count__number'>{count}</div>
