@@ -9,7 +9,7 @@ function ItemList( { products } ){
             return(
                 <div className="item">
                     <Item products={thisproduct} key={thisproduct.id}/>
-                    <ItemCount initial={1} stock={thisproduct.stock}/>
+                    <ItemCount initial={1} stock={thisproduct.stock} txtButton="AGREGAR A CARRITO"/>
                 </div>
             )
         })}
