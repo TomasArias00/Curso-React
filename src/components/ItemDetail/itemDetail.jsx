@@ -8,7 +8,7 @@ function ItemDetail( {product} ){
             <div className="item__detail__info">
             <h2 className="item__detail__title">{product.title}</h2>
             <p className="item__detail__price">${product.price}</p>
-            <ItemCount initial={1} stock={product.stock} txtButton="FINALIZAR COMPRA"></ItemCount>
+            <ItemCount initial={1} stock={product.stock} txtButton="FINALIZAR COMPRA" handle='handleAddToCart'></ItemCount>
             </div>
         </div>
     )

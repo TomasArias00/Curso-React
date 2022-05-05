@@ -39,6 +39,12 @@
 }
 
 .item__count__add__to__cart{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item__count__add__to__cart{
     margin: 4px;
     padding: .5rem;
     background-color: #10069f;
@@ -48,4 +54,6 @@
     border: none;
     cursor: pointer;
     width: 50%;
+    height: 2rem;
+    text-decoration: none;
 }

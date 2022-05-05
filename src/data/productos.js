@@ -3,7 +3,7 @@ const products = [
         'id': 1,
         'title': 'PIZZA FRIZZIO',
         'price': 400,
-        'category': 'FRIZZIO, ALL',
+        'category': 'frizzio',
         'stock': 6,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0112/0112_Card_637800188658799777.jpg'
     },
@@ -11,7 +11,7 @@ const products = [
         'id': 2,
         'title': 'PECHUGAS DE POLLO',
         'price': 350,
-        'category': 'FRIZZIO, ALL',
+        'category': 'frizzio',
         'stock': 4,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0110/0110_Card_637776874900451468.jpg'
     },
@@ -19,7 +19,7 @@ const products = [
         'id': 3,
         'title': 'HAMBURGUESA FRIZZIO',
         'price': 450,
-        'category': 'FRIZZIO, ALL',
+        'category': 'frizzio',
         'stock': 10,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0104/0104_Card_637800146443854419.jpg'
     },
@@ -27,7 +27,7 @@ const products = [
         'id': 4,
         'title': 'PAPAS BASTON',
         'price': 300,
-        'category': 'FRIZZIO, ALL',
+        'category': 'frizzio',
         'stock': 5,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0107/0107_Card_637776831581470522.jpg'
     },
@@ -35,7 +35,7 @@ const products = [
         'id': 5,
         'title': 'BASTONCITOS DE MUZZARELLA',
         'price': 450,
-        'category': 'FRIZZIO, ALL',
+        'category': 'frizzio',
         'stock': 10,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0113/0113_Card_637800222593033435.jpg'
     },
@@ -43,7 +43,7 @@ const products = [
         'id': 6,
         'title': 'PALITO CREMOSO',
         'price': 150,
-        'category': 'PALITOS, HELADO, ALL',
+        'category': 'palitos',
         'stock': 25,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0106/0106_Card_637776871658820323.jpg'
     },
@@ -51,7 +51,7 @@ const products = [
         'id': 7,
         'title': 'PICO DULCE',
         'price': 160,
-        'category': 'PALITOS, HELADO, ALL',
+        'category': 'palitos',
         'stock': 12,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0108/0108_Card_637776872682921876.jpg'
     },
@@ -59,7 +59,7 @@ const products = [
         'id': 8,
         'title': 'PALITO BOMBÓN',
         'price': 180,
-        'category': 'PALITOS, HELADO, ALL',
+        'category': 'palitos',
         'stock': 30,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0085/0085_Card_637776812366309687.jpg'
     },

@@ -3,23 +3,39 @@ import React, {useEffect, useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
 import products from '../../data/productos.js'
 import ItemList from '../ItemList/ItemList';
-function getProducts(){
+import { useParams } from 'react-router-dom';
+
+function getProducts(categoryid){
     return new Promise((resolve, reject) => {
         setTimeout( () => {
-            resolve(products)
-        }, 500);
+            if(categoryid !== undefined){
+               const arrayFiltered =  products.filter ((products) =>{
+                    return products.category == categoryid;
+                });
+                resolve(arrayFiltered);
+                console.log(arrayFiltered);
+            }
+            else{
+                resolve(products);
+                console.log(products)
+            }
+        }, 0);
     })
 }
 
-function ItemListContainer(props){
 
+
+function ItemListContainer(props){
     const [products, setProducts] = useState([]);
-    
+
+    const categoryid = useParams().categoryid;
+    console.log('ID: ', categoryid);
+
     useEffect( () => {
-        getProducts().then( responseProducts => {
+        getProducts(categoryid).then( responseProducts => {
             setProducts(responseProducts);
         });
-    }, []);
+    }, [categoryid]);
 
     return(
         <div className='item__list__container'>
