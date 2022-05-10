@@ -16,9 +16,9 @@ function getProduct(itemid){
 })}
 
 
-function ItemListContainer(){
+function ItemDetailContainer(){
 
-    const itemid = useParams().itemid;
+    const itemid = useParams().itemid; 
 
     console.log('ID: ', itemid);
     const [product, setProduct] = useState([]);
@@ -36,4 +36,4 @@ function ItemListContainer(){
     );
 }
 
-export default ItemListContainer;
+export default ItemDetailContainer;

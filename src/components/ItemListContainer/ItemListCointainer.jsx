@@ -26,6 +26,12 @@ function getProducts(categoryid){
 
 
 function ItemListContainer(props){
+
+    function onAdd(count){
+        alert("agregaste al carrito "+count+" items")
+    }
+
+
     const [products, setProducts] = useState([]);
 
     const categoryid = useParams().categoryid;
@@ -40,7 +46,7 @@ function ItemListContainer(props){
     return(
         <div className='item__list__container'>
             <h1 className='item__list__title'>{props.titulo}</h1>
-            <ItemList products={products}></ItemList>
+            <ItemList onAdd={onAdd} products={products}></ItemList>
         </div>
     );
 }

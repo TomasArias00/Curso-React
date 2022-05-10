@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 function ItemCount(props){
     const [count, setCount] = useState(props.initial);
 
+    function handleClick(){
+        props.onAdd(count);
+    }
+
     function handleAdd(){
         if(count<props.stock){
             setCount(count + 1);
@@ -37,9 +41,7 @@ function ItemCount(props){
                 <div className='item__count__number'>{count}</div>
                 <button className='item__count__add' onClick={handleAdd}>+</button>
             </div>
-            <Link to={`/detail/${props.id}`} className='item__count__add__to__cart'>
-            <button  onClick={handleAddToCart} className='item__count__add__to__cart'>{props.txtButton}</button>
-            </Link>
+            <button  onClick={handleClick} className='item__count__add__to__cart'>{props.txtButton}</button>
         </div>
     </div>
     );
