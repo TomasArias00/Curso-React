@@ -3,13 +3,19 @@ import './itemDetail.css'
 import ItemCount from '../ItemCount/ItemCount.jsx'
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import useCartContext from "../../store/CartContext";
 
 function ItemDetail( {product} ){
     const [isInCart, setIsInCart] = useState(false)
+    const { addToCart } = useCartContext();
+    const { estaEnElCarro} = useCartContext()
     function onAdd(count){
-        alert("agregaste al carrito "+count+" items")
         setIsInCart(true)
-    }
+        addToCart(product, count)
+        // estaEnElCarro(product.id)
+        console.log("ACA SE AGREGA EL ID: ",product.id)
+        
+    };
     return(
         <div className="item__detail">
             <img src={product.img} alt="" className="item__detail__img" />

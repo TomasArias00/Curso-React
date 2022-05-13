@@ -2,7 +2,15 @@ import './navBar.css';
 import logoGridoAzul from '../../assets/img/logoGridoAzul.jpg';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import { Link } from 'react-router-dom';
+
+import useCartContext from '../../store/CartContext';
+
 function NavBar(){
+
+    const { contextFunction } = useCartContext();
+        contextFunction();
+
+
     return(
         <div className="nav__bar__container">
             <div className="nav__bar">

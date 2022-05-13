@@ -13,11 +13,9 @@ function getProducts(categoryid){
                     return products.category == categoryid;
                 });
                 resolve(arrayFiltered);
-                console.log(arrayFiltered);
             }
             else{
                 resolve(products);
-                console.log(products)
             }
         }, 0);
     })
@@ -35,7 +33,6 @@ function ItemListContainer(props){
     const [products, setProducts] = useState([]);
 
     const categoryid = useParams().categoryid;
-    console.log('ID: ', categoryid);
 
     useEffect( () => {
         getProducts(categoryid).then( responseProducts => {
