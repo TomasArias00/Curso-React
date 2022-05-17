@@ -13,9 +13,16 @@ function ItemDetail( {product} ){
         setIsInCart(true)
         addToCart(product, count)
         // estaEnElCarro(product.id)
-        console.log("ACA SE AGREGA EL ID: ",product.id)
+
         
     };
+
+    if(!product){
+        return(
+            <h1>CARGANDO...</h1>
+        )
+    }
+    else{
     return(
         <div className="item__detail">
             <img src={product.img} alt="" className="item__detail__img" />
@@ -32,6 +39,7 @@ function ItemDetail( {product} ){
             </div>
         </div>
     )
+        }
 }
 
 export default ItemDetail;

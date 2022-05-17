@@ -38,9 +38,14 @@ export function CartContextProvider({children}){
         setCart(cartFilter);
     }
 
-    const clearCart = (item) => {
+    const clearCart = () => {
         setCart([])
         console.log("carrito Vacio")
+    }
+
+    const cantInCart = () => {
+       const total = cart.forEach(item => total += item.cant)
+       console.log(total)
     }
 
     // const estaEnElCarro = (id) => {
@@ -52,8 +57,8 @@ export function CartContextProvider({children}){
     const contextFunction = () => console.log()
 
     return(
-        <CartContext.Provider value={ { contextFunction, cart, addToCart, removeFromCart, clearCart} }>
-+            {children}
+        <CartContext.Provider value={ { contextFunction, cart, addToCart, removeFromCart, clearCart, cantInCart} }>
+            {children}
         </CartContext.Provider>
     )
 }

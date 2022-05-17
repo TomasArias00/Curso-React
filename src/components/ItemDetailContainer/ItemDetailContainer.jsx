@@ -12,7 +12,7 @@ function getProduct(itemid){
                 return products.id == parseInt(itemid);
         });
         resolve(detailFiltered)
-    }, 20);
+    }, 100);
 })}
 
 
@@ -20,7 +20,7 @@ function ItemDetailContainer(){
 
     const itemid = useParams().itemid; 
 
-    const [product, setProduct] = useState([]);
+    const [product, setProduct] = useState();
     
     useEffect( () => {
         getProduct(itemid).then( responseProducts => {
