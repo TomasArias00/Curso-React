@@ -1,25 +1,9 @@
 import './itemListContainer.css';
 import React, {useEffect, useState} from 'react';
 import ItemCount from '../ItemCount/ItemCount';
-import products from '../../data/productos.js'
 import ItemList from '../ItemList/ItemList';
 import { useParams } from 'react-router-dom';
-
-function getProducts(categoryid){
-    return new Promise((resolve, reject) => {
-        setTimeout( () => {
-            if(categoryid !== undefined){
-               const arrayFiltered =  products.filter ((products) =>{
-                    return products.category == categoryid;
-                });
-                resolve(arrayFiltered);
-            }
-            else{
-                resolve(products);
-            }
-        }, 0);
-    })
-}
+import { getAllItems as getProducts, getItemsByCategory } from '../../data/index'
 
 
 
@@ -29,15 +13,19 @@ function ItemListContainer(props){
         alert("agregaste al carrito "+count+" items")
     }
 
-
     const [products, setProducts] = useState([]);
-
     const categoryid = useParams().categoryid;
 
     useEffect( () => {
+        if(categoryid === undefined){
         getProducts(categoryid).then( responseProducts => {
             setProducts(responseProducts);
         });
+    }else{
+        getItemsByCategory(categoryid).then((respuestaPromise) => {
+            setProducts(respuestaPromise)
+        })
+    }
     }, [categoryid]);
 
     return(
