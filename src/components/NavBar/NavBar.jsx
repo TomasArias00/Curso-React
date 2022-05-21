@@ -2,6 +2,7 @@ import './navBar.css';
 import logoGridoAzul from '../../assets/img/logoGridoAzul.jpg';
 import CartWidget from '../CartWidget/CartWidget.jsx';
 import { Link } from 'react-router-dom';
+// import { dataToFirebase } from '../../data';
 
 import useCartContext from '../../store/CartContext';
 
@@ -22,6 +23,7 @@ function NavBar(){
                     <li className="nav__bar__item"><Link to="/">CONTACTO</Link></li>
                 </ul>
             </div>
+            {/* <button onClick={dataToFirebase}>ACTIVAR LA CONECTA AL FIREBASE</button> */}
             <CartWidget/>
         </div>
     )

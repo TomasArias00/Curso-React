@@ -2,10 +2,33 @@ import React, {useContext} from "react";
 import './CartContainer.css'
 import useCartContext from '../../store/CartContext.jsx'
 import { clear } from "@testing-library/user-event/dist/clear";
+import {createBuyOrder} from '../../data/index'
+import { Link } from "react-router-dom";
+
 
 function CartContainer(){
 
-    const { cart, removeFromCart, clearCart } = useCartContext();
+    const { cart, removeFromCart, clearCart, getTotalPrice} = useCartContext();
+
+    function handleBuy(){
+        const itemsToyBuy = cart.map((item) => ({
+            title: item.title,
+            cant: item.cant,
+            price: item.price,
+            id: item.id
+        }))
+        const buyOrder = {
+            buyer: {
+                name: "Tomás Arias",
+                phone: "987654321",
+                email: "tomasarias2000@gmail.com"
+            },
+            items: itemsToyBuy,
+            total: getTotalPrice(),
+        }
+        createBuyOrder(buyOrder);
+        clearCart();
+    }
 
     if(cart.length === 0 ){
         return(
@@ -30,6 +53,7 @@ function CartContainer(){
                 </div>
             })}
             <button onClick={clearCart} className="cart__item__button">VACIAR CARRITO</button>
+            <Link to="/" onClick={handleBuy}>¡COMPRAR!</Link>
         </div>
     )
     }   

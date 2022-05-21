@@ -40,13 +40,19 @@ export function CartContextProvider({children}){
 
     const clearCart = () => {
         setCart([])
-        console.log("carrito Vacio")
     }
 
     const cantInCart = () => {
        const total = cart.forEach(item => total += item.cant)
-       console.log(total)
     }
+
+    const getTotalPrice = () => {
+        let totalPrice = 0;
+        cart.forEach(item => totalPrice += item.cant * item.price)
+        return totalPrice;
+    }
+
+
 
     // const estaEnElCarro = (id) => {
     //     const cartList = [...cart];
@@ -54,10 +60,10 @@ export function CartContextProvider({children}){
     //     console.log("true or false: ",cartListComp)
     // }
 
-    const contextFunction = () => console.log()
+    const contextFunction = () => {};
 
     return(
-        <CartContext.Provider value={ { contextFunction, cart, addToCart, removeFromCart, clearCart, cantInCart} }>
+        <CartContext.Provider value={ { contextFunction, cart, addToCart, removeFromCart, clearCart, cantInCart, getTotalPrice} }>
             {children}
         </CartContext.Provider>
     )
