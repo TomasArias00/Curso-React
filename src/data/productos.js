@@ -67,7 +67,7 @@ const products = [
         'id': 9,
         'title': 'BOMBON ESCOCÉS',
         'price': 200,
-        'category': 'BOMBON, HELADO, ALL',
+        'category': 'bombones, HELADO, ALL',
         'stock': 15,
         'img': 'https://gestion.clubgrido.com.ar:4430/Public/ImgExchange/0081/0081_Card_637775105165974862.jpg'
     },

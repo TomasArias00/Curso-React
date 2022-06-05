@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import './ItemCount.css'
-import { Link } from 'react-router-dom';
 
 function ItemCount(props){
     const [count, setCount] = useState(props.initial);

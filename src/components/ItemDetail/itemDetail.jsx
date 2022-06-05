@@ -8,11 +8,9 @@ import useCartContext from "../../store/CartContext";
 function ItemDetail( {product} ){
     const [isInCart, setIsInCart] = useState(false)
     const { addToCart } = useCartContext();
-    const { estaEnElCarro} = useCartContext()
     function onAdd(count){
         setIsInCart(true)
         addToCart(product, count)
-        // estaEnElCarro(product.id)
 
         
     };
@@ -31,7 +29,7 @@ function ItemDetail( {product} ){
             <p className="item__detail__price">${product.price}</p>
             {isInCart?
             <Link to={`/cart`} >
-                <button>VER CARRITO</button>
+                <button className="see__cart">VER CARRITO</button>
             </Link>
              :
             <ItemCount initial={1} stock={product.stock} txtButton="AGREGAR AL CARRITO" onAdd={onAdd}></ItemCount>

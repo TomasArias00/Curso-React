@@ -1,7 +1,6 @@
 import React, {useContext} from "react";
 import './CartContainer.css'
 import useCartContext from '../../store/CartContext.jsx'
-import { clear } from "@testing-library/user-event/dist/clear";
 import {createBuyOrder} from '../../data/index'
 import { Link } from "react-router-dom";
 

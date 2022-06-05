@@ -1,6 +1,5 @@
 import React from "react";
 import "./item.css"
-import products from "../../data/productos";
 import { Link } from "react-router-dom";
 function Item( {products} ){
     return(
